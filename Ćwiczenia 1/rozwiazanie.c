@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #define N 100
-#define TEST 0    // 1 - ulatwia testowanie programu,
+#define TEST 1    // 1 - ulatwia testowanie programu,
                   // 0 - dla wersji przeznaczonej do automatycznej oceny
 
 // Returns n evenly spaced samples, calculated over the interval [start, stop].
