@@ -49,6 +49,16 @@ void var_dystryb(double dystr[], int len)
             dystr[i] += dystr[k];
 }
 
+void odmien_kost(int ile)
+{
+    if (ile==1)
+        printf("KOSTKA");
+    else if (ile%10 >= 2 && ile%10 <= 4 && (ile < 10 || ile > 20))
+        printf("KOSTKI");
+    else
+        printf("KOSTEK");
+}
+
 int main()
 {
     srand(time(0));
@@ -58,10 +68,12 @@ int main()
     probab_distrib(v, L_PROB);
     var_dystryb(w, L_PROB);
 
-    printf("    [%d KOSTEK]\n\n", L_KOSTEK);
-    printf("Dyskretny rozklad prawdopodobienstwa: \n");
+    printf(" [%d ", L_KOSTEK);
+    odmien_kost(L_KOSTEK);
+    printf("]\n\n");
+    printf(" Dyskretny rozklad prawdopodobienstwa: \n");
     rep_graf(v, MOZ_SUM, L_KOSTEK);
-    printf("\n\nDystrybuanta: \n");
+    printf("\n\n Dystrybuanta: \n");
     rep_graf(w, MOZ_SUM, L_KOSTEK);
 
     return 0;
