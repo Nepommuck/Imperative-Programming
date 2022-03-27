@@ -129,7 +129,6 @@ int find_idents(FILE *stream)
             mode = 0;
         }
 
-
         c = getc(stream);
     }
 
